@@ -1,10 +1,15 @@
 console.log('hello');
-function game() {
-    let computerWins = 0;
-    let playerWins = 0;
-    let gameWinner = false;
+const playRock = document.querySelector('button[type="rock"]');
+const playPaper = document.querySelector('button[type="paper"]');
+const playScissors = document.querySelector('button[type="scissor"]');
 
-    do {    
+let computerWins = 0;
+let playerWins = 0;
+let gameWinner = false;
+
+function game(finalPlayerSelection) {
+
+  
 
     
         function getComputerChoice() {
@@ -13,8 +18,6 @@ function game() {
             return randomChoice;
         }
         const computerSelection = getComputerChoice();
-        const playerSelection = window.prompt("Rock, Paper, or Scissor?");
-        const finalPlayerSelection = playerSelection.toLowerCase();
 
         
 
@@ -62,6 +65,22 @@ function game() {
 
  
     
-    } while (gameWinner == false);
-    
 }
+
+    
+
+playRock.addEventListener('click', function () {
+    console.log('rock');
+    game("rock");
+})
+
+playPaper.addEventListener('click', function () {
+    console.log('paper');
+    game("paper");
+})
+
+playScissors.addEventListener('click', function () {
+    console.log('scissor');
+    game("scissor");
+})
+
