@@ -3,13 +3,9 @@ const playRock = document.querySelector('button[type="rock"]');
 const playPaper = document.querySelector('button[type="paper"]');
 const playScissors = document.querySelector('button[type="scissor"]');
 
-
 let computerWins = 0;
 let playerWins = 0;
 let gameWinner = false;
-
-
-
 
 function game(finalPlayerSelection) {
     
@@ -74,13 +70,8 @@ let playerWinsDisplayP = document.querySelector("#playerwins");
 let computerWinsDisplayP = document.querySelector("#computerwins");
 let resultsDiv = document.querySelector("#results");
 
-
-
 playerWinsDisplayP.innerHTML=`<p>Player Wins: ${playerWins}</p>`;
 computerWinsDisplayP.innerHTML=`<p>Computer Wins: ${computerWins}</p>`;
-
-
-
 
 playRock.addEventListener('click', function () {
     console.log('rock');
